@@ -95,25 +95,26 @@ header ul li a {
   flex-direction: column;
 }
 .intro form input[type="email"] {
-  position: relative;
   padding: .75rem 1.5rem;
   margin: 1rem 0;
   font-family: var(--open-sans);
   border: 1px solid var(--primary-dark-blue);
-  border-radius: 5px;
+  border-radius: 3px;
 }
 .intro form input[type="email"]:invalid {
   border: 1px solid red;
 }
-.intro form::before  {
-  content: "Please check your email";
+.intro form .email-error {
   position: absolute;
   bottom: -20px;
   font-family: var(--open-sans);
-  font-size: 14px;
+  font-size: 12px;
   color: red;
+  opacity: 0;
 }
-
+.intro form input[type="email"]:invalid + .email-error {
+  opacity: 1;
+}
 .intro form input[type="button"] {
   padding: .75rem;
   font-size: 14px;
@@ -122,7 +123,7 @@ header ul li a {
   background-color: var(--accent-blue);
   color: var(--neutral-blue);
   border: none;
-  border-radius: 5px;
+  border-radius: 3px;
   cursor: pointer;
 }
 .intro form input[type="button"]:hover {
