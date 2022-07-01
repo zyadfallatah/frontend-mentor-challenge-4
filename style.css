@@ -1,0 +1,159 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  list-style: none;
+  text-decoration: none;
+}
+:root {
+  /* colors */
+  --primary-dark-blue: hsl(243, 87%, 12%);
+  --primary-Desaturated-Blue: hsl(238, 22%, 44%);
+  --accent-blue: hsl(224, 93%, 58%);
+  --accent-cyan: hsl(170, 45%, 43%);
+  --neutral-blue: hsl(240, 75%, 98%);
+  --neutral-gray: hsl(0, 0%, 75%);
+
+  /* opens sans Font { Heading -  Header Navigation - Call-to-actions } */
+  --open-sans: 'Open Sans', sans-serif;
+
+  /* raleway Font { Body Font } */
+  --raleway: 'Raleway', sans-serif;
+}
+
+/* body props*/
+body {
+  padding-inline: 4rem;
+}
+@media(max-width: 750px) {
+  body {
+    padding-inline: 1.5rem;
+  }
+}
+
+/* Start Header  */
+header {
+  font-family: var(--open-sans);
+  font-size: 15px;
+  display: flex;
+  align-items: center;
+  padding: 2rem 0;
+}
+header .logo {
+  display: flex;
+}
+header .logo img {
+  height: 35px;
+  margin-right: 1rem;
+}
+header nav {
+  display: flex;
+  justify-content: flex-end;
+  flex: 1;
+}
+header ul {
+  display: flex;
+  justify-content: space-between;
+  min-width: 190px;
+}
+header ul li a {
+  color: var(--primary-dark-blue);
+}
+/* End Header */
+
+/* Start Inroduction */
+.intro {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  margin-bottom: 2rem
+}
+.intro .intro-img,
+.intro .intro-heading {
+  flex: 1;
+}
+.intro img {
+  width: 100%;
+  margin: 2rem 0;
+}
+.intro h1 {
+  font-family: var(--open-sans);
+  font-weight: 700;
+  font-size: 7vw;
+  color: var(--primary-dark-blue);
+}
+.intro p {
+  font-family: var(--open-sans);
+  color: var(--primary-dark-blue);
+  margin-top: 2rem;
+  margin-bottom: 1rem;
+}
+.intro form {
+  position: relative;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+}
+.intro form input[type="email"] {
+  position: relative;
+  padding: .75rem 1.5rem;
+  margin: 1rem 0;
+  font-family: var(--open-sans);
+  border: 1px solid var(--primary-dark-blue);
+  border-radius: 5px;
+}
+.intro form input[type="email"]:invalid {
+  border: 1px solid red;
+}
+.intro form::before  {
+  content: "Please check your email";
+  position: absolute;
+  bottom: -20px;
+  font-family: var(--open-sans);
+  font-size: 14px;
+  color: red;
+}
+
+.intro form input[type="button"] {
+  padding: .75rem;
+  font-size: 14px;
+  font-family: var(--open-sans);
+  font-weight: 700;
+  background-color: var(--accent-blue);
+  color: var(--neutral-blue);
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+.intro form input[type="button"]:hover {
+  opacity: .7;
+}
+@media(min-width: 767px) {
+  .intro {
+    text-align: left;
+    flex-direction: row-reverse;
+    align-items: center;
+  }
+  .intro h1 {
+    font-size: 2rem;
+    max-width: 530px;
+  }
+  .intro p {
+    max-width: 510px;
+  }
+  /* Start Form Adj */
+  .intro form {
+    flex-direction: row;
+    max-height: 50px;
+    gap: 1rem;
+  }
+  .intro form input[type="email"] {
+    flex-basis: 45%;
+    margin: 0;
+  }
+  .intro form input[type="button"] {
+    flex-basis: 25%;
+  }
+  /* End Form Adj */
+}
+/* End Introduction */
