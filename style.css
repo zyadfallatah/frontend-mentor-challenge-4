@@ -21,30 +21,50 @@
   --raleway: 'Raleway', sans-serif;
 }
 
-/* body props*/
-body {
-  padding-inline: 4rem;
+/* Start Container Props */
+.container {
+  position: relative;
+  margin: 0 auto;
+  padding: 0 15px;
 }
-@media(max-width: 750px) {
-  body {
-    padding-inline: 1.5rem;
+/* medias of containers */
+@media (min-width: 768px) {
+  .container {
+    width: 750px;
   }
 }
+@media (min-width: 992px) {
+  .container {
+    width: 970px;
+  }
+}
+@media (min-width: 1200px) {
+  .container {
+    width: 1170px;
+  }
+}
+/* End Container Props */
+
 
 /* Start Header  */
-header {
+header .container {
   font-family: var(--open-sans);
   font-size: 15px;
   display: flex;
   align-items: center;
-  padding: 2rem 0;
+  padding: 2rem 15px;
 }
 header .logo {
   display: flex;
 }
 header .logo img {
-  height: 35px;
+  height: 30px;
   margin-right: 1rem;
+}
+@media(min-width: 767px) {
+  header .logo img {
+    height: 35px;
+  }
 }
 header nav {
   display: flex;
@@ -54,7 +74,7 @@ header nav {
 header ul {
   display: flex;
   justify-content: space-between;
-  min-width: 190px;
+  min-width: 200px;
 }
 header ul li a {
   color: var(--primary-dark-blue);
@@ -62,11 +82,13 @@ header ul li a {
 /* End Header */
 
 /* Start Inroduction */
-.intro {
+.intro .container {
   display: flex;
   flex-direction: column;
   text-align: center;
-  margin-bottom: 2rem
+  margin-bottom: 2rem;
+  max-width: 400px;
+  font-family: var(--open-sans);
 }
 .intro .intro-img,
 .intro .intro-heading {
@@ -77,17 +99,17 @@ header ul li a {
   margin: 2rem 0;
 }
 .intro h1 {
-  font-family: var(--open-sans);
   font-weight: 700;
-  font-size: 7vw;
+  font-size: 26px;
   color: var(--primary-dark-blue);
 }
 .intro p {
-  font-family: var(--open-sans);
   color: var(--primary-dark-blue);
   margin-top: 2rem;
   margin-bottom: 1rem;
 }
+
+/* Start Form Styles */
 .intro form {
   position: relative;
   margin: 0 auto;
@@ -118,7 +140,7 @@ header ul li a {
 .intro form input[type="button"] {
   padding: .75rem;
   font-size: 14px;
-  font-family: var(--open-sans);
+  font-family: var(--raleway);
   font-weight: 700;
   background-color: var(--accent-blue);
   color: var(--neutral-blue);
@@ -129,11 +151,17 @@ header ul li a {
 .intro form input[type="button"]:hover {
   opacity: .7;
 }
+
+/* End Form styles */
+
+
 @media(min-width: 767px) {
-  .intro {
+  .intro .container {
+    font-family: var(--raleway);
     text-align: left;
     flex-direction: row-reverse;
     align-items: center;
+    max-width: none;
   }
   .intro h1 {
     font-size: 2rem;
@@ -141,6 +169,7 @@ header ul li a {
   }
   .intro p {
     max-width: 510px;
+    font-family: var(--open-sans);
   }
   /* Start Form Adj */
   .intro form {
