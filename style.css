@@ -178,12 +178,38 @@ header ul li a {
     gap: 1rem;
   }
   .intro form input[type="email"] {
-    flex-basis: 45%;
+    flex-basis: 50%;
     margin: 0;
   }
   .intro form input[type="button"] {
-    flex-basis: 25%;
+    flex-basis: 30%;
   }
   /* End Form Adj */
 }
 /* End Introduction */
+
+/* Start productive */
+
+/* background color and curves */
+.productive img[alt = "mobile curve"],
+.productive img[alt = "desktop curve"] {
+  display: block;
+  width: 100%;
+}
+.productive img[alt = "desktop curve"] {
+  display: none;
+}
+@media(min-width: 767px) {
+  .productive img[alt = "mobile curve"] {
+    display: none;
+  }
+  .productive img[alt = "desktop curve"] {
+    display: block;
+  }
+}
+.productive .overlay {
+  background-color: var(--neutral-blue);
+  height: 100px;
+}
+
+/* End productive */
