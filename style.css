@@ -189,10 +189,17 @@ header ul li a {
 /* End Introduction */
 
 /* Start productive */
+.productive {
+  margin-top: 6rem;
+}
+.productive .container {
+  max-width: 400px  ;
+}
 
-/* background color and curves */
+/* Start background color and curves */
 .productive img[alt = "mobile curve"],
-.productive img[alt = "desktop curve"] {
+.productive img[alt = "desktop curve"], 
+.productive img[alt = "hero-2"] {
   display: block;
   width: 100%;
 }
@@ -209,7 +216,48 @@ header ul li a {
 }
 .productive .overlay {
   background-color: var(--neutral-blue);
-  height: 100px;
+}
+/* End background color and curves */
+
+.productive img[alt = "hero-2"] {
+  padding: 3rem 0;
+}
+.productive .heading {
+  color: var(--primary-dark-blue);
+  padding: 1.5rem 0;
+  text-align: center;
+  font-size: 1rem;
+  font-weight: 700;
+  font-family: var(--raleway);
+}
+.productive .content p {
+  max-width: 330px;
+  color: var(--primary-Desaturated-Blue);
+  font-family: var(--open-sans);
+  font-size: 14px;
+  margin: 0 auto;
+}
+.productive .second-para {
+  margin: 1rem auto !important   ;
+}
+.productive .content a {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-decoration: underline;
+  margin-top: 2rem;
+  color: var(--accent-cyan);
+}
+.productive .content a:hover {
+  filter: brightness(1.4);
+  -webkit-filter: brightness(1.4);
+  -o-filter: brightness(1.4);
+  -moz-filter: brightness(1.4);
+  -ms-filter: brightness(1.4);
 }
 
+.productive .box {
+  background-color: white;
+  margin: 0 2rem;
+}
 /* End productive */
