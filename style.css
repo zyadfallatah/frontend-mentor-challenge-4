@@ -216,6 +216,7 @@ header ul li a {
 }
 .productive .overlay {
   background-color: var(--neutral-blue);
+  padding-bottom: 2rem;
 }
 /* End background color and curves */
 
@@ -245,6 +246,8 @@ header ul li a {
   justify-content: center;
   align-items: center;
   text-decoration: underline;
+  font-family: var(--open-sans);
+
   margin-top: 2rem;
   color: var(--accent-cyan);
 }
@@ -256,8 +259,71 @@ header ul li a {
   -ms-filter: brightness(1.4);
 }
 
+
+/* Start Testomonial */
 .productive .box {
+  max-width: 300px;
+  font-family: var(--open-sans);
+  color: var(--primary-Desaturated-Blue);
   background-color: white;
-  margin: 0 2rem;
+  margin: 2rem;
+  padding: 1rem 17px;
+  border-radius: 5px;
+}
+.productive .box blockquote {
+  margin: .75rem 0;
+  font-size: 11px;
+  font-weight: 700;
+}
+.productive .box .reviewer {
+  display: flex;
+  align-items: center;
+}
+.productive .box .reviewer img {
+  margin-right: .5rem;
+  height: 35px;
+  border-radius: 50%;
+}
+
+.productive .box .name {
+  font-size: .8rem;
+  font-weight: 700;
+}
+.productive .box .role {
+  font-size: .7rem;
+}
+/* End Testomonial */
+
+@media(min-width: 767px) {
+  .productive .container {
+    display: flex;
+    flex-direction: row-reverse;
+    max-width: none;
+  }
+  .productive .container > * {
+    flex-basis: 50%;
+  }
+  .productive .container > .content {
+    flex-basis: 60%;
+  }
+  .productive .content > *:not(.box) {
+    margin: 0 0 1rem !important;
+  }
+  .productive .heading {
+    text-align: left;
+    font-size: 2rem;
+  }
+  .productive .content p  {
+    color: var(--primary-dark-blue);
+    max-width: 475px;
+    font-size: 14px;
+  }
+  .productive .content a {
+    justify-content: start;
+  }
+  .productive .content .box {
+    margin: 2rem 0;
+    padding: 1rem 2rem;
+  }
 }
 /* End productive */
