@@ -346,6 +346,9 @@ header ul li a {
   max-width: 275px;
   line-height: 1.5;
 }
+.access .access-form {
+  position: relative;
+}
 .access .access-email, 
 .access .access-btn {
   min-width: 60%;
@@ -359,6 +362,19 @@ header ul li a {
 .access .access-email::placeholder {
   font-family: var(--raleway);
 }
+.access .access-email:invalid {
+  margin-bottom: 1.75rem;
+  border: 1px solid red;
+}
+.access .access-error {
+  display: none;
+  position: absolute;
+  font-size: 11px;
+  top: 45px;
+}
+.access .access-email:invalid +.access-error {
+  display: block;
+}
 .access .access-btn {
   border: 0;
   padding: .75rem;
@@ -371,7 +387,9 @@ header ul li a {
   border-radius: 3px;
   cursor: pointer;
 }
-
+.access .access-btn:hover {
+  filter: brightness(1.2);
+}
 /* Start access media */
 @media(min-width: 767px) {
   .access {
@@ -403,3 +421,80 @@ header ul li a {
 /* End access media */
 
 /* End Access */
+
+/* Start footer */
+footer a {
+  color: var(--neutral-blue);
+}
+footer {
+  font-family: var(--open-sans);
+  padding: 3rem 2rem;
+  background-color: var(--primary-dark-blue);
+  color: white;
+}
+footer .footer-content h2{
+  display: inline-block;
+  font-size: 1rem;
+  font-weight: 400;
+  margin-bottom: 1rem;
+}
+footer .container {
+  margin: 0 auto;
+  max-width: 400px;
+}
+.footer-content {
+  margin-bottom: 3rem;
+}
+.footer-content .logo {
+  margin-bottom: 2rem;
+}
+.footer-content [alt="phone-photo"], 
+.footer-content [alt="email-photo"] {
+  margin-right: .5rem;
+}
+.footer-content li {
+  margin-bottom: 1rem;
+}
+footer .social {
+  margin: 0;
+}
+footer .social ul {
+  display: flex;
+  justify-content: center;
+}
+footer .social i {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 16px;
+  height: 16px;
+  padding: 1rem;
+  margin: 0 .25rem;
+  border: 1px solid var(--neutral-blue);
+  border-radius: 50%;
+  font-size: 14px;
+}
+
+/* Start footer media */
+@media(min-width: 767px) {
+  footer {
+    padding: 5rem 0;
+  }
+  .footer-content {
+    margin: 0 ;
+    margin-top: 1rem;
+  }
+  footer .container {
+    display: flex;
+    justify-content: space-between;
+    margin: 0 auto;
+    max-width: none;
+  }
+  footer .container > div:not(:first-child){
+    margin-top: 6rem;
+  }
+}
+
+/* End footer media */
+
+/* End footer */
