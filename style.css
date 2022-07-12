@@ -474,6 +474,12 @@ footer .social i {
   border-radius: 50%;
   font-size: 14px;
 }
+footer .social i:hover {
+  border-color: var(--primary-Desaturated-Blue);
+}
+footer a:hover {
+  color: var(--primary-Desaturated-Blue);
+}
 
 /* Start footer media */
 @media(min-width: 767px) {
