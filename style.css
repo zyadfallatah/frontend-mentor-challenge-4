@@ -217,7 +217,7 @@ header ul li a {
 }
 .productive .overlay {
   background-color: var(--neutral-blue);
-  padding-bottom: 2rem;
+  padding: 6rem 0;
 }
 /* End background color and curves */
 
@@ -333,7 +333,7 @@ header ul li a {
 .access {
   background-color: var(--primary-Desaturated-Blue);
   text-align: center;
-  padding: 3rem 0;
+  padding: 6rem 0;
   color: var(--neutral-blue);
   font-family: var(--raleway);
 } 
