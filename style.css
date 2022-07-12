@@ -474,9 +474,12 @@ footer .social i {
   border-radius: 50%;
   font-size: 14px;
 }
-footer .social i:hover {
+footer .social li:hover i,
+footer .social li:hover a {
+  color: var(--primary-Desaturated-Blue);
   border-color: var(--primary-Desaturated-Blue);
 }
+
 footer a:hover {
   color: var(--primary-Desaturated-Blue);
 }
